@@ -1,0 +1,54 @@
+<div >
+<ul   class="films" >
+
+    <li class="film card" *ngFor="let film of films">
+
+        <img class="poster" [src]="film.poster"/>
+
+        
+
+        
+
+            <!-- <span class="title">{{film.title}}</span> -->
+            <p>
+
+                <span class="title">{{film.title}}</span>
+    
+                <span class="rating" *ngIf="film.metascore >= '80'">★★★★★</span>
+    
+                <span class="rating" *ngIf="film.metascore >= '60' && film.metascore < '80'">★★★★</span>
+    
+                <span class="rating" *ngIf="film.metascore >= '40' && film.metascore < '60'">★★★</span>
+
+                <span class="rating" *ngIf="film.metascore >= '20' && film.metascore < '40'">★★</span>
+
+                <span class="rating" *ngIf="film.metascore < '20'">★</span>
+    
+            </p>       
+
+            <!-- pipe -->
+
+            <!-- <span class="rating" >{{film.metascore| startRating }}</span>  -->
+
+        
+
+        <dl>
+
+            <dt>Release date</dt>
+
+            <dd>{{film.released}}</dd>
+
+            <dt>Director</dt>
+
+            <dd>{{film.director}}</dd>
+
+            <dt>Actors</dt>
+
+            <dd> {{film.actors}}</dd>
+
+        </dl>
+
+        <p class="plot"> {{film.plot}}</p>
+
+  </ul>
+</div>

@@ -1,0 +1,21 @@
+p {
+    font-family: Lato;
+  }
+  
+  #root {
+    padding: 30px;
+  }
+  
+  .login-form{
+    max-width: 950px;
+    margin: auto;
+  }
+  
+  .invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+  

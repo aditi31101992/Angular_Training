@@ -1,0 +1,16 @@
+<div class="logout-container">
+  <button  (click)="doLogout()">Logout</button>
+</div>
+<div id="search-film">
+    <form >
+      <label for="search">Search :</label>
+      <input id="search" type="text" name="title"/>
+
+      <button type="submit"  (click)="searchFilms()">Search</button>
+      
+    </form>
+  
+    <ul class="films">
+      <app-film *ngIf="FormSubmit === true"></app-film>
+    </ul>
+  </div>

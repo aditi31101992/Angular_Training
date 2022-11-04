@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationServiceService } from './service/authentication-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo';
+  title = 'Search Films'
+orderReference = 'ABCXYZ'
+price = 17.3
+loggedIn=false;
+  constructor(private authService: AuthenticationServiceService){
+    console.log("App component")
+  }
+
+ 
 }
